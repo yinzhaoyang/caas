@@ -1,6 +1,9 @@
-[toc]
+# 说明
+本文简要介绍一种中小型、单数据中心的云端智能电话呼叫管理系统的设计。如需进一步了解，可邮件咨询：jonny.yin@outlook.com
 
-# aicc
+# 需求
+
+# 架构
 
 ![aicc_architecture](aicc_architecture.drawio.png)
 
