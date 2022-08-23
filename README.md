@@ -1,3 +1,3 @@
 # aicc
 
-![aicc_architecture](aicc_architecture.png)
+![aicc_architecture](aicc_architecture.drawio.png)
