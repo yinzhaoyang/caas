@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-08-23T15:31:21.751Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="CL1RpTqZ7NcnhGULyYtM" version="20.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-23T15:33:01.122Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36" etag="YgcA1knjz3sJbl0EPosU" version="20.2.6" type="github">
   <diagram id="T-4zhw54iL5-WuWWGdit" name="第 1 页">
     <mxGraphModel dx="2105" dy="1748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -63,9 +63,6 @@
         </mxCell>
         <mxCell id="4IM4PW19O6CHA79I9ZXi-29" value="Task Schedule System" style="rounded=1;whiteSpace=wrap;html=1;fontSize=14;align=center;verticalAlign=top;glass=0;sketch=0;" parent="1" vertex="1">
           <mxGeometry x="204" y="580" width="296" height="210" as="geometry" />
-        </mxCell>
-        <mxCell id="4IM4PW19O6CHA79I9ZXi-31" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;glass=0;sketch=0;fontSize=14;" parent="1" vertex="1">
-          <mxGeometry x="1000" y="1190" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4IM4PW19O6CHA79I9ZXi-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontSize=14;startArrow=none;startFill=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#0050ef;strokeColor=#001DBC;" parent="1" source="4IM4PW19O6CHA79I9ZXi-32" target="4IM4PW19O6CHA79I9ZXi-63" edge="1">
           <mxGeometry relative="1" as="geometry" />
