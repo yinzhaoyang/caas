@@ -14,6 +14,19 @@
 
 # 架构
 
+基于云原生开发的DevOps流程，除了aicc系统架构，下图同时展示了开发和运维架构。
+
+## 开发域(DEV Domain)
+git -- 代码管理
+jenkins -- 编译测试部署自动化jobs管理
+jira -- 需求及开发任务管理
+conflunce -- 共享文档管理
+对于个人开发者及小团队，建议直接使用DevOps-SaaS，如[阿里云云效DevOps平台](https://devops.aliyun.com/)
+
+
+## 运维域(OPS Domain)
+
+
 ![aicc_architecture](aicc_architecture.drawio.png)
 
 <a href="https://app.diagrams.net/#Hyinzhaoyang%2Faicc%2Fmaster%2Faicc_architecture.drawio.png" target="_blank">Edit in diagrams.net</a>
