@@ -85,3 +85,16 @@ ASR/TTS推荐使用优质第三方服务，意图识别及对话引擎进行自�
 在我们设定的系统要求中，要在用户通话过程中对用户进行实时画像以决定当前呼叫的后续处理策略（挂机，转人工，应答内容 等）。
 
 这里使用Kafka进行数据异步采集，Flink从Kafka获得数据，实时计算后结果存入MySQL数据库。如果业务流程需要实时反馈，也可将结果发送到Kafka，相关服务从Kafka获得结果即时进行业务流程的处理。
+
+### 交互消息及主要Use Case
+以下消息编号Mx对应于架构图中的交互编号。  
+M1.  运营人员通过浏览器WebUI向WebServer进行运营管理，如任务配置。  
+M2.  WebServer将配置信息写入MySQL数据库。  
+M3.  WebServer通知TaskController有任务变更。 
+M11. TaskController优先从Redis获取任务信息。
+M12. TaskController通过InternalDataProvider从MySQL获取任务信息并写入Redis。 
+M13. TaskController根据呼叫任务创建呼叫指令，通过Kakfa发布。  
+M14. TaskAgent订阅获得来自Kafka的呼叫指令。
+M15. TaskAgent从Redis获取处理呼叫指令所需其他信息。
+M16. TaskAgent按需通过InternalDataProvider从MySQL获取任务信息并写入Redis。
+M17. TaskAgent初始化呼叫状态后，通过ESL接口向FreeSwitch发送呼叫指令。
