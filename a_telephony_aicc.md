@@ -118,3 +118,6 @@ M34. DialogServer按需使用TTS服务将应答文字转化为语音并发送到
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;M25/M27在人工坐席处理电话场景下使用。  
 M41. Flink从Kafka接收FreeSwitch发布的对话信息进行实时计算处理。  
 M42. Flink将实时计算处理结果写入MySQL。  
+
+
+## 高可用(HA)设计
