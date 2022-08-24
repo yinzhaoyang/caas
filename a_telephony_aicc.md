@@ -69,7 +69,7 @@ Task Controller/Task Agent是一种典型的 资源调度和分布式执行系�
 这里介绍使用OpenSIPs+FreeSwitch方案。
 
 TaskAgent通过ESL接口向FreeSwitch发送指令，接受事件。  
-FreeSwitch 采用Core + Extended Modules 架构，我们可以创建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。
+FreeSwitch 采用Core + Extended Modules 架构，我们可以创建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。  
 (这一部分如果很多人有兴趣的话，有空时候我把之前零散笔记整理介绍一下。)
 
 #### 智能对话服务
@@ -99,3 +99,8 @@ M14. TaskAgent订阅获得来自Kafka的呼叫指令。
 M15. TaskAgent从Redis获取处理呼叫指令所需其他信息。  
 M16. TaskAgent按需通过InternalDataProvider从MySQL获取任务信息并写入Redis。  
 M17. TaskAgent初始化呼叫状态后，通过ESL接口向FreeSwitch发送呼叫指令。  
+M21. FreeSwitch向OpenSips发送接受SIP-INVITE及其他SIP消息创建Session。FreeSwitch启动时向OpenSips注册。   
+M22. OpenSips从Redis获取目标号码的注册信息。  
+M23. OpenSips按需从MySQL获取目标号码注册信息并写入Redis。  
+M24. OpenSips向目标网关发送接受SIP消息。  
+M25. OpenSips向浏览器坐席JsSip发起呼叫。在M24之后，FreeSwitch将外部呼叫状态发送到TaskAgent，TaskAgent根据呼叫信息判断电话由人工坐席或机器人接听。  
