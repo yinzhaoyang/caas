@@ -16,6 +16,7 @@
 
 基于云原生开发的DevOps流程，除了aicc系统架构，下图同时展示了开发和运维架构。
 
+
 ![aicc_architecture](aicc_architecture.drawio.png)
 
 <a href="https://app.diagrams.net/#Hyinzhaoyang%2Faicc%2Fmaster%2Faicc_architecture.drawio.png" target="_blank">Edit in diagrams.net</a>
