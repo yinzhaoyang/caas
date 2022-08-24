@@ -68,5 +68,9 @@ Task Controller/Task Agent是一种典型的 资源调度和分布式执行系�
 这里介绍使用OpenSIPs+FreeSwitch方案。
 
 TaskAgent通过ESL接口向FreeSwitch发送指令，接受事件。  
-FreeSwitch 采用Core + Extended Modules 架构，通过新建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。
+FreeSwitch 采用Core + Extended Modules 架构，我们可以创建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。
 
+
+#### 智能对话服务
+智能对话服务，从呼叫处理服务获得用户语音，进行ASR，再对ASR结果进行意图判断，由对话引擎进行对话驱动。  
+ASR/TTS推荐使用优质第三方服务，意图识别及对话引擎进行自研以满足业务场景的灵活需求。  
