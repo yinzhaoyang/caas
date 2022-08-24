@@ -32,7 +32,7 @@ conflunce -- 共享文档管理
 ## 运维架构(OPS Domain)
 运维架构基于Kubernates，具有以下优点：
 + 屏蔽不同运行环境(本地，不同云服务)差异。在本地环境可以先部署Kubernetes底座，其他云环境的Kubernate服务的部署运行基本一致。
-+ Kubernates提供了强大的服务调度，配置管理能力。
++ Kubernates提供了强大的配置管理，服务调度，服务扩展能力。
 
 ## 业务系统架构
 
