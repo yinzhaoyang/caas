@@ -106,3 +106,15 @@ M24. OpenSips向目标网关发送接受SIP消息。
 M25. OpenSips向浏览器坐席JsSip发起呼叫。  
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;在M24之后，FreeSwitch将外部呼叫状态发送到TaskAgent。  
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;TaskAgent根据呼叫信息判断电话由人工坐席或机器人接听，并发送呼叫指令到FreeSwitch。重复类似M21~M23的交互。 
+M26. FreeSwitch与PSTN Gateway建立媒体传输通道进行语音传输。
+M27. FreeSwitch与人工坐席浏览器WebRTC建立媒体传输通道进行语音传输。
+M28. FreeSwitch将电话交互信息发布到Kafka。
+M29. FreeSwitch将电话交互语音发送发到Object Storage保存。
+M31. FreeSwitch将用户语句发送到DialogServer由AI-Robot进行对话应答。
+M32. FreeSwitch将用户语音片段发送到AsrProxy进行语音转文字处理。
+M33. AsrProxy进行必要的语音处理(如噪音识别排除)后使用ASR服务处理。
+M34. DialogServer按需使用TTS服务将应答文字转化为语音并发送到FreeSwitch传到用户端。
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;M31~M34在AI机器人处理电话场景下使用。
+&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;M25/M27在人工坐席处理电话场景下使用。
+M41. Flink从Kafka接收FreeSwitch发布的对话信息进行实时计算处理。
+M42. Flink将实时计算处理结果写入MySQL。
