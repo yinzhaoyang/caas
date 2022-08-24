@@ -103,4 +103,5 @@ M21. FreeSwitch向OpenSips发送接受SIP-INVITE及其他SIP消息创建Session�
 M22. OpenSips从Redis获取目标号码的注册信息。  
 M23. OpenSips按需从MySQL获取目标号码注册信息并写入Redis。  
 M24. OpenSips向目标网关发送接受SIP消息。  
-M25. OpenSips向浏览器坐席JsSip发起呼叫。在M24之后，FreeSwitch将外部呼叫状态发送到TaskAgent，TaskAgent根据呼叫信息判断电话由人工坐席或机器人接听。  
+M25. OpenSips向浏览器坐席JsSip发起呼叫。  
+&ensp;&ensp;&ensp;&ensp;&ensp;在M24之后，FreeSwitch将外部呼叫状态发送到TaskAgent，TaskAgent根据呼叫信息判断电话由人工坐席或机器人接听，并发送呼叫指令到FreeSwitch。 
