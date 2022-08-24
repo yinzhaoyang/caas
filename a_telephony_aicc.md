@@ -66,3 +66,6 @@ Task Controller/Task Agent是一种典型的 资源调度和分布式执行系�
 
 可以使用开源的Kamailio/OpenSIPs实现registerar及sip-proxy功能，使用FreeSWITCH, Asterisk语音媒体处理功能。  
 这里介绍使用OpenSIPs+FreeSwitch方案。
+
+TaskAgent通过ESL接口向FreeSwitch发送指令，接受事件。
+FreeSwitch 采用Core + Extended Modules 架构，通过新建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。
