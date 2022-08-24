@@ -88,9 +88,9 @@ ASR/TTS推荐使用优质第三方服务，意图识别及对话引擎进行自�
 
 ### 交互消息及主要Use Case
 以下消息编号Mx对应于架构图中的交互编号。  
-M1.  &ensp WebUI向WebServer发送运营人员的运营管理请求，如任务配置。  
-M2.  &ensp WebServer将配置信息写入MySQL数据库。  
-M3.  &ensp WebServer通知TaskController有任务变更。  
+M1.  &ensp;WebUI向WebServer发送运营人员的运营管理请求，如任务配置。  
+M2.  &ensp;WebServer将配置信息写入MySQL数据库。  
+M3.  &ensp;WebServer通知TaskController有任务变更。  
 M11. TaskController优先从Redis获取任务信息。  
 M12. TaskController通过InternalDataProvider从MySQL获取任务信息并写入Redis。  
 M13. TaskController根据呼叫任务创建呼叫指令，通过Kakfa发布。  
