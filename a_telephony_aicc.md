@@ -16,7 +16,11 @@
 
 基于云原生开发的DevOps流程，除了aicc系统架构，下图同时展示了开发和运维架构。
 
-## 开发域(DEV Domain)
+![aicc_architecture](aicc_architecture.drawio.png)
+
+<a href="https://app.diagrams.net/#Hyinzhaoyang%2Faicc%2Fmaster%2Faicc_architecture.drawio.png" target="_blank">Edit in diagrams.net</a>
+
+## 开发架构(DEV Domain)
 git -- 代码管理  
 jenkins -- 编译测试部署自动化jobs管理  
 jira -- 需求及开发任务管理  
@@ -24,9 +28,10 @@ conflunce -- 共享文档管理
 对于个人开发者及小团队，建议直接使用DevOps-SaaS，如[阿里云云效DevOps平台](https://devops.aliyun.com/)  
 
 
-## 运维域(OPS Domain)
+## 运维架构(OPS Domain)
+运维架构基于Kubernates，具有以下优点：
++ 屏蔽不同运行环境(本地，不同云服务)差异。在本地环境可以先部署Kubernetes底座，其他云环境的Kubernate服务的部署运行基本一致。
++ Kubernates提供了强大的服务调度，配置管理能力。
 
+## 业务系统架构
 
-![aicc_architecture](aicc_architecture.drawio.png)
-
-<a href="https://app.diagrams.net/#Hyinzhaoyang%2Faicc%2Fmaster%2Faicc_architecture.drawio.png" target="_blank">Edit in diagrams.net</a>
