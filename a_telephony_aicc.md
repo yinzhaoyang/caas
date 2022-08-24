@@ -102,7 +102,7 @@ M17. TaskAgent初始化呼叫状态后，通过ESL接口向FreeSwitch发送呼�
 M21. FreeSwitch向OpenSips发送接受SIP-INVITE及其他SIP消息创建Session。FreeSwitch启动时向OpenSips注册。   
 M22. OpenSips从Redis获取目标号码的注册信息。  
 M23. OpenSips按需从MySQL获取目标号码注册信息并写入Redis。  
-M24. OpenSips向目标网关发送接受SIP消息。  
+M24. OpenSips向目标网关发送接受SIP消息。网关已经向OpenSips注册。 
 M25. OpenSips向浏览器坐席JsSip发起呼叫。  
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;在M24之后，FreeSwitch将外部呼叫状态发送到TaskAgent。  
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;TaskAgent根据呼叫信息判断电话由人工坐席或机器人接听，并发送呼叫指令到FreeSwitch。重复类似M21\~M23的交互。  
