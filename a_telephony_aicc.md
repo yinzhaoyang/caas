@@ -1,5 +1,6 @@
 # 说明
-本文简要介绍一种中小型、单数据中心的云端智能电话呼叫管理系统的设计。如需进一步了解，可邮件咨询：jonny.yin@outlook.com
+本文简要介绍一种中小型、单数据中心的云端智能电话呼叫管理系统的设计。  
+如需进一步了解，可邮件咨询：jonny.yin@outlook.com
 
 # 需求概述
 + 系统可以通过SIP与SIP Gateway对接，实现与PSTN电话号码（手机号码，固定电话号码）进行呼叫通话。
@@ -69,7 +70,7 @@ Task Controller/Task Agent是一种典型的 资源调度和分布式执行系�
 
 TaskAgent通过ESL接口向FreeSwitch发送指令，接受事件。  
 FreeSwitch 采用Core + Extended Modules 架构，我们可以创建一个新的Endpoint Module与智能对话系统的交互实现机器人自动对话。
-
+(这一部分如果很多人有兴趣的话，有空时候我把之前零散笔记整理介绍一下。)
 
 #### 智能对话服务
 智能对话服务，从呼叫处理服务获得用户语音，进行ASR，再对ASR结果进行意图判断，由对话引擎进行对话驱动。  
