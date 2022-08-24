@@ -16,6 +16,6 @@ This series of documents briefly introduces three typical system architectures o
 
 + [A FreeSWITCH based intelligent IP telephony System in single data center](a_telephony_aicc.md)
 + [A WebRTC-based audio and video conference system](a_audio_video_conference_system.md)
-+ [A multi-data center distributed and high reliable CaaS system through user partition and service layering](a_multiple_dc_caas_system.md)
++ [A multi-data center distributed and high avalable CaaS system through user partition and service layering](a_multiple_dc_caas_system.md)
 
 For further information, please email: jonny.yin@outlook.com
