@@ -90,11 +90,11 @@ ASR/TTS推荐使用优质第三方服务，意图识别及对话引擎进行自�
 以下消息编号Mx对应于架构图中的交互编号。  
 M1.  运营人员通过浏览器WebUI向WebServer进行运营管理，如任务配置。  
 M2.  WebServer将配置信息写入MySQL数据库。  
-M3.  WebServer通知TaskController有任务变更。 
-M11. TaskController优先从Redis获取任务信息。
-M12. TaskController通过InternalDataProvider从MySQL获取任务信息并写入Redis。 
+M3.  WebServer通知TaskController有任务变更。  
+M11. TaskController优先从Redis获取任务信息。  
+M12. TaskController通过InternalDataProvider从MySQL获取任务信息并写入Redis。  
 M13. TaskController根据呼叫任务创建呼叫指令，通过Kakfa发布。  
-M14. TaskAgent订阅获得来自Kafka的呼叫指令。
-M15. TaskAgent从Redis获取处理呼叫指令所需其他信息。
-M16. TaskAgent按需通过InternalDataProvider从MySQL获取任务信息并写入Redis。
-M17. TaskAgent初始化呼叫状态后，通过ESL接口向FreeSwitch发送呼叫指令。
+M14. TaskAgent订阅获得来自Kafka的呼叫指令。  
+M15. TaskAgent从Redis获取处理呼叫指令所需其他信息。  
+M16. TaskAgent按需通过InternalDataProvider从MySQL获取任务信息并写入Redis。  
+M17. TaskAgent初始化呼叫状态后，通过ESL接口向FreeSwitch发送呼叫指令。  
