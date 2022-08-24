@@ -58,4 +58,8 @@ conflunce -- 共享文档管理
 Task Controller/Task Agent是一种典型的 资源调度和分布式执行系统，可以参考K8S中的各种资源调度器的策略架构及实现。
 
 #### 呼叫处理服务
-
+呼叫处理服务，作为IP Telephony Server，需要提供一下能力:  
+SIP Gateway对接管理  
+UA注册管理  
+SIP呼叫信令处理  
+语音媒体处理  
