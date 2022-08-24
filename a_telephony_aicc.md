@@ -13,6 +13,14 @@
 + 随着客户/用户增加，系统可通过服务扩展正常运行。
 + 系统具有高可用性。
 
+
+# 业务模型
+通过对业务需求中各部分进行抽象，建立一系列的对象及对象之间的关系。通过对象之间的交互可实现业务需求中功能性部分。
+![aicc_models](aicc_models.drawio.png)
+
+<a href="https://app.diagrams.net/#Hyinzhaoyang%2Fcaas%2Fmaster%2Faicc_models.drawio.png" target="_blank">Edit in diagrams.net</a>
+
+
 # 架构
 
 基于云原生开发的DevOps流程，除了aicc系统架构，下图同时展示了开发和运维架构。
