@@ -153,7 +153,25 @@ HA设计从整体到局部进行考虑。
 + Telephony-AICC 作为一个整体服务，对外提供服务的稳定性，扩展性，处理效率。
 + Telephony-AICC 内部各服务的稳定性，扩展性，处理效率。
 
-TAICC 作为整体服务对外提供的服务接入点在架构图中M1, M24, M25, M26, M27。系统的SLA体现在这些服务接入点的HA上。 
+TAICC 作为整体服务对外提供的服务接入点在架构图中M1, M24, M25, M26, M27。系统的SLA体现在这些服务接入点的HA上。  
+
+M1使用https与系统交互，可以使用云服务平台提供的LBS(私有环境可以部署使用nginx)实现负载均衡。这个服务接入点的HA问题转移为后端服务(WebServer)的稳定性和扩展性问题，在后文服务HA中讨论。  
+
+M24/M25通过SIP与系统交互，其中M25使用SIP over WebSocket, M24使用SIP over TCPs, SIP over UDP。  
+基于两个原因不使用LBS(nginx)的UDP Load Balance:  
+1. UDP server 的健康检查机制不能快速检测UDP Server状态异常。  
+2. 对于外呼场景，需要从OpenSIPs向外部Gateway发送SIP消息。  
+
+在IP 电话场景中，相对于媒体数据M26/M27, M24/M25在交互数量，流量带宽，处理开销方面远小于。所以对于M24/M25，在中小型呼叫中心场景，通过主备提升OpenSIPS的HA是优先于负载均衡。
+在多用户高并发场景的负载均衡方案参考<>一文。  
+OpenSIPS主备可采用 VIP+KeepAlived+2OpenSIPS方案。大多云环境提供HaVIP。  
+
+
+M26/M27通过RTP/SRTP/UDP/DTLS协议与系统进行双向媒体信息交互。基于交互量、带宽、及处理开销的考虑，对于M26/M27的服务需要实现负载均衡。  
+同时M26/M27的交互规范需要通过SIP进行协商，过程涉及NAT网络穿透问题，不适合使用通用的LBS方案。
+
+因为OpenSIPS的引入，可以使用多台FreeSwitch注册到OpenSIPS以实现负载均衡。这部分方案在后文进一步说明。  
+
 
 ## 安全设计
 
