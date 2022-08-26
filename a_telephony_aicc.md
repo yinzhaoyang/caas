@@ -174,8 +174,9 @@ M26/M27通过RTP/SRTP/UDP/DTLS协议与系统进行双向媒体信息交互。�
 
 因为OpenSIPS的引入，可以使用多台FreeSwitch注册到OpenSIPS以实现负载均衡。这部分方案在后文进一步说明。  
 
-#### 子系统HA
+### 子系统HA
+TODO  
 
 
 ## 安全设计
-
+TODO  
