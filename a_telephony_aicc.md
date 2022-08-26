@@ -164,7 +164,7 @@ M24/M25通过SIP与系统交互，其中M25使用SIP over WebSocket, M24使用SI
 1. UDP server 的健康检查机制不能快速检测UDP Server状态异常。  
 2. 对于外呼场景，需要从OpenSIPs向外部Gateway发送SIP消息。  
 
-在IP 电话场景中，相对于媒体数据M26/M27, M24/M25在交互数量，流量带宽，处理开销方面远小于。所以对于M24/M25，在中小型呼叫中心场景，通过主备提升OpenSIPS的HA是优先于负载均衡。
+在IP 电话场景中，M24/M25在交互数量，流量带宽，处理开销方面远小于媒体数据交互M26/M27。所以对于M24/M25，在中小型呼叫中心场景，通过主备提升OpenSIPS的HA是优先于负载均衡。
 在多用户高并发场景的负载均衡方案参考<>一文。  
 OpenSIPS主备可采用 VIP+KeepAlived+2OpenSIPS方案。大多云环境提供HaVIP。  
 
